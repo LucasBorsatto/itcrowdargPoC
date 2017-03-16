@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 
 import { ItemService } from './item/item.service';
 
-import { ItemModule } from './item/item.module'
+import { ItemModule } from './item/item.module';
 
 @NgModule({
   declarations: [
