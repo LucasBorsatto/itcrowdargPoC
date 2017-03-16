@@ -1,0 +1,40 @@
+<md-card>
+  <md-input-container class="item-input">
+    <textarea mdInput placeholder="Ingrese el texto.." [(ngModel)]="newItem.description"  [maxLength]="textareaLength"></textarea>
+  </md-input-container>
+  <div class="item-add item-action">
+    <button class="done" md-fab (click)="addItem()">
+      <md-icon>check</md-icon>
+    </button>
+  </div>
+
+  <md-list>
+    <md-list-item *ngFor="let item of items" class="item-list">
+      <div class="item-description">
+        <label>
+          {{item.description}}
+        </label>
+      </div>
+      <div class="item-action">
+        <span>
+          <button class="edit" md-fab (click)="editItem(item)">
+            <md-icon>edit</md-icon>
+          </button>
+        </span>
+      </div>
+      <div class="item-action">
+        <span>
+          <button class="delete" md-fab (click)="removeItem(item)">
+            <md-icon>delete</md-icon>
+          </button>
+        </span>
+      </div>
+    </md-list-item>
+    <div *ngIf="items?.length > 0" class="item-action item-clear">
+      <button class="clear" md-fab (click)="deleteAllItems()">
+        <md-icon>clear</md-icon>
+      </button>
+      <p>Borrar todos</p>
+    </div>
+  </md-list>
+</md-card>

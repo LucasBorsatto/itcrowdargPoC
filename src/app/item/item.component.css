@@ -1,0 +1,58 @@
+.item-input {
+  width: 100%;
+}
+
+md-card md-list md-list-item {
+  word-break: break-all;
+  text-align: left;
+  padding: 15px 0;
+  color: rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid;
+}
+
+.item-description label {
+  color: rgb(169, 169, 169);
+}
+
+md-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.item-description {
+  width: 90%;
+  float: left;
+}
+
+.item-add {
+  text-align: right;
+  width: 100%;
+}
+
+.item-clear {
+  padding-top: 20px;
+}
+
+.item-action {
+  padding-right: 10px;
+}
+
+.item-action button {
+  color: white;
+}
+
+.delete {
+  background-color: red;
+}
+
+.done  {
+  background-color: forestgreen;
+}
+
+.clear  {
+  background-color: darkred;
+}
+
+
