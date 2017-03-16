@@ -20,18 +20,20 @@ export class ItemComponent {
   }
 
   addItem() {
-    let findItem = this.itemService.getItemById(this.newItem.id);
+    if(this.newItem.description) {
+      let findItem = this.itemService.getItemById(this.newItem.id);
 
-    if(findItem) {
-      findItem = this.newItem;
-    } else {
-      const isItemAlready = this.itemService.getItemByDescription(this.newItem.description);
-
-      if(isItemAlready) {
-        this.repeatedItem = this.newItem.description;
-        this.isItemAlready = true;
+      if(findItem) {
+        findItem = this.newItem;
       } else {
-        this.itemService.addItem(this.newItem);
+        const isItemAlready = this.itemService.getItemByDescription(this.newItem.description);
+
+        if(isItemAlready) {
+          this.repeatedItem = this.newItem.description;
+          this.isItemAlready = true;
+        } else {
+          this.itemService.addItem(this.newItem);
+        }
       }
     }
 
