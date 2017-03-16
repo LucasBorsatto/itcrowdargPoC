@@ -35,4 +35,10 @@ export class ItemService {
       .pop();
   }
 
+  getItemByDescription(description: string): Item {
+    return this.items
+      .filter(item => item.description === description)
+      .pop();
+  }
+
 }

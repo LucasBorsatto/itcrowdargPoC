@@ -2,6 +2,12 @@
   <md-input-container class="item-input">
     <textarea mdInput placeholder="Ingrese el texto.." [(ngModel)]="newItem.description"  [maxLength]="textareaLength"></textarea>
   </md-input-container>
+  <div *ngIf="isItemAlready">
+    <md-icon class="item-error">error_outline</md-icon>
+    <p>
+      Ya ingresó el item: {{repeatedItem}}
+    </p>
+  </div>
   <div class="item-add item-action">
     <button class="done" md-fab (click)="addItem()">
       <md-icon>check</md-icon>

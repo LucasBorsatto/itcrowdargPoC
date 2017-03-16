@@ -38,6 +38,11 @@ md-card {
   padding-top: 20px;
 }
 
+.item-error {
+  color: darkred;
+  font-size: 30px;
+}
+
 .item-action {
   padding-right: 10px;
 }

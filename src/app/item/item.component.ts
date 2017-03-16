@@ -12,7 +12,9 @@ export class ItemComponent {
 
   textareaLength: number = 25;
   newItem: Item = new Item();
+  repeatedItem: string;
   items: Item[];
+  isItemAlready: boolean = false;
 
   constructor(private itemService: ItemService) {
   }
@@ -23,7 +25,14 @@ export class ItemComponent {
     if(findItem) {
       findItem = this.newItem;
     } else {
-      this.itemService.addItem(this.newItem);
+      const isItemAlready = this.itemService.getItemByDescription(this.newItem.description);
+
+      if(isItemAlready) {
+        this.repeatedItem = this.newItem.description;
+        this.isItemAlready = true;
+      } else {
+        this.itemService.addItem(this.newItem);
+      }
     }
 
     this.reloadList();
