@@ -9,7 +9,7 @@ export class ItemService {
 
   constructor() {
     localforage.config({
-      name: 'itCrowdArgApp'
+      name: 'itCrowdArgBD'
     });
     localforage.getItem("items").then((result) => {
       this.items = result ? <any>result : [];
