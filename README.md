@@ -2,7 +2,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
 1. Download or clone this repo.
-2. Go into /iicrowdargApp
+2. Go into /itcrowdargApp
 3. Install dependencies: `npm install`
 4. To preview in the browser the production build: `ng serve -o`
 
