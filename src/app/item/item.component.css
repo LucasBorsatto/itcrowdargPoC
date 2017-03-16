@@ -5,9 +5,12 @@
 md-card md-list md-list-item {
   word-break: break-all;
   text-align: left;
-  padding: 15px 0;
+  padding: 15px 0px;
   color: rgba(0, 0, 0, 0.12);
-  border-bottom: 1px solid;
+  border: 1px solid;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 6px;
 }
 
 .item-description label {

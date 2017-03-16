@@ -8,8 +8,8 @@
     </button>
   </div>
 
-  <md-list>
-    <md-list-item *ngFor="let item of items" class="item-list">
+  <md-list dnd-sortable-container [sortableData]="items">
+    <md-list-item *ngFor="let item of items; let i = index" class="item-list" dnd-sortable [sortableIndex]="i">
       <div class="item-description">
         <label>
           {{item.description}}

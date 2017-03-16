@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
+import { DndModule } from 'ng2-dnd';
 
 import { ItemComponent } from './item.component';
 import { ItemService } from './item.service';
@@ -10,7 +11,8 @@ import { ItemService } from './item.service';
   imports: [
     CommonModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    DndModule.forRoot()
   ],
   exports: [
     ItemComponent
